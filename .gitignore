@@ -1,4 +1,17 @@
+# ignore edit files
+.*.swp
 
+
+.vim/.netrwhist
+.DS_Store
+.account
+.anyconnect
+.git_prev/
+.ievms/
+.ovftool.ssldb
+.tmux.conf
+.vim_prev/
+INSTALL_LOG
 .CFUserTextEncoding
 .GalleryRemote/
 .Trash/

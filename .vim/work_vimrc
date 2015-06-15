@@ -5,3 +5,12 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 " set expandtab
+
+" adding verify_code to vimrc, use :make cmd
+" https://intranet.athenahealth.com/wiki/node.esp?ID=30419
+set makeprg=$P4_HOME/techops/coredev/bin/verify_code\ --full\ --vim\ %\ $*
+set errorformat=%f:%l:%m
+
+" associate esp with perl
+au BufRead,BufNewFile *.esp setfiletype perl
+
