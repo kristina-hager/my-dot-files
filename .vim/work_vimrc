@@ -1,0 +1,7 @@
+" Specialization of vimrc for work conventions
+" 
+" define tab as 4; use tabs not spaces
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+" set expandtab
