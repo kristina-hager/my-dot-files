@@ -4,7 +4,7 @@
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-" set expandtab
+set noexpandtab
 
 " adding verify_code to vimrc, use :make cmd
 " https://intranet.athenahealth.com/wiki/node.esp?ID=30419
