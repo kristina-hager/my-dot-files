@@ -31,8 +31,14 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-" \p : perl comment line, i.e. line of ### matching prev line length
-nnoremap <leader>p yypVr#
+" \pl:  i.e. line of ### matching prev line length
+nnoremap <leader>pl yypVr#
+
+" \dl : line of ----- matching prev line length
+nnoremap <leader>dl yypVr-
+
+" command Insclog to insert javascript console.log line
+:command Iclog :normal oconsole.log("replaceme");<ESC>
 
 " make vim add a matching brace and auto-indent
 " inoremap {<cr> {<cr>}<c-o>O<tab>
