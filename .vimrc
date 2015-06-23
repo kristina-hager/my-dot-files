@@ -37,8 +37,11 @@ nnoremap <leader>pl yypVr#
 " \dl : line of ----- matching prev line length
 nnoremap <leader>dl yypVr-
 
-" command Insclog to insert javascript console.log line
-:command Iclog :normal oconsole.log("replaceme");<ESC>
+" command Icl to insert javascript console.log line
+command -nargs=* Icl :normal oconsole.log(<args>);<ESC>
+
+" Idd to insert data dumper w/ one argument, e.g. :Idd \$foo
+command -nargs=1 Idd :normal ouse Data::Dumper;<ENTER>print Dumper(<args>);<ESC>
 
 " make vim add a matching brace and auto-indent
 " inoremap {<cr> {<cr>}<c-o>O<tab>
