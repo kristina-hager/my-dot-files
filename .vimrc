@@ -52,6 +52,26 @@ inoremap {<cr> {<cr>}<c-o>O
 inoremap [<cr> [<cr>]<c-o>O
 inoremap (<cr> (<cr>)<c-o>O
 
+" recommended syntastic defaults
+" faq: https://github.com/scrooloose/syntastic#faqcheckers
+" and wiki on checkers: https://github.com/scrooloose/syntastic/wiki/%28v3.6.0%29---Syntax-Checkers
+" since I have not really pushed this
+" note that perl checkers are disabled by default for security reasons, to enable:
+" let g:syntastic_enable_perl_checker = 1
+" to set checker by filetype:
+" let g:syntastic_<filetype>_checkers = ['<checker-name>']
+" NOTE that I have not really tested this plugin yet other than that it is
+" installed
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
 " source in work specific settings, last wins
 :if !empty(glob("~/.vim/work_vimrc"))
 :   source ~/.vim/work_vimrc
