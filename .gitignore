@@ -1,3 +1,6 @@
+# ignore nerdtree files
+.NERDTreeBookmarks
+
 # ignore edit files
 .*.swp
 
