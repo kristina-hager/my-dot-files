@@ -71,6 +71,17 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" NERDTree prefs
+" open nerdtree if vi opened w/o a file
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" automatically open nerdtree when vim starts
+" autocmd vimenter * NERDTree
+" open NERDTree with ctrl-n
+map <C-n> :NERDTreeToggle<CR>
+" show bookmarks by default
+let NERDTreeShowBookmarks=1
+ 
 
 " source in work specific settings, last wins
 :if !empty(glob("~/.vim/work_vimrc"))
