@@ -31,6 +31,15 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
+" do 'smart' searching, e.g. lowercase searches are case insensitive
+" but if your search has an upper case letter then it'll be case sensitive
+" /copyright      " Case insensitive
+" /Copyright      " Case sensitive
+" /copyright\C    " Case sensitive
+" /Copyright\c    " Case insensitive
+set ignorecase
+set smartcase
+
 " \pl:  i.e. line of ### matching prev line length
 nnoremap <leader>pl yypVr#
 
