@@ -111,4 +111,8 @@ termprojthoughts
 test.py
 tmp/
 web_dev/
-
+.AndroidStudio1.3/
+.docker/
+.m2/
+.matplotlib/
+.qgis2/

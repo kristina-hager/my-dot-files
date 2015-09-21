@@ -79,6 +79,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+" to turn off syntastic checking: :SyntasticToggleMode
+"let g:syntastic_disabled_filetype=['java']
+let g:syntastic_java_checkers=['']
 
 " NERDTree prefs
 " open nerdtree if vi opened w/o a file
