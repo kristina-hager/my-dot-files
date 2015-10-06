@@ -52,6 +52,9 @@ command -nargs=* Icl :normal oconsole.log(<args>);<ESC>
 " Idd to insert data dumper w/ one argument, e.g. :Idd \$foo
 command -nargs=1 Idd :normal ouse Data::Dumper;<ENTER>print Dumper(<args>);<ESC>
 
+" Insert latex bold code font
+command -nargs=* Itt :normal a\textbf{\texttt{<args>}}<ESC>
+
 " make vim add a matching brace and auto-indent
 " inoremap {<cr> {<cr>}<c-o>O<tab>
 " inoremap [<cr> [<cr>]<c-o>O<tab>
