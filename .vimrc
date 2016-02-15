@@ -49,9 +49,6 @@ nnoremap <leader>dl yypVr-
 " command Icl to insert javascript console.log line
 command -nargs=* Icl :normal oconsole.log(<args>);<ESC>
 
-" Idd to insert data dumper w/ one argument, e.g. :Idd \$foo
-command -nargs=1 Idd :normal ouse Data::Dumper;<ENTER>print Dumper(<args>);<ESC>
-
 " Insert latex bold code font
 command -nargs=* Itt :normal a\textbf{\texttt{<args>}}<ESC>
 

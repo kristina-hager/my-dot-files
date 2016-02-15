@@ -14,3 +14,10 @@ set errorformat=%f:%l:%m
 " associate esp with perl
 au BufRead,BufNewFile *.esp setfiletype perl
 
+" work specific shortcuts
+" Idd to insert data dumper w/ one argument, e.g. :Idd \$foo
+command -nargs=1 Idd :normal ouse Data::Dumper;<ENTER>warn Dumper(<args>);<ESC>
+" Iclu to insert a cluck
+command -nargs=0 Iclu :normal ouse AthenaCarp qw(cluck); cluck "hi";<ESC>
+" Isql to insert show sql
+command -nargs=0 Isql :normal owarn "sql: ". $sql->ToUnboundSQL() . "\n";<ESC>
